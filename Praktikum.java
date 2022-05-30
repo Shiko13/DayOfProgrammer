@@ -15,14 +15,11 @@ public class Praktikum {
     }
 
     public static boolean isLeapYear(int year) {
-       if (year % 4 == 0) {
-           if (year % 100 == 0 && year % 400 != 0) {
-               return false;
-           } else {
-               return true;
-           }
-       } else {
-           return false;
-       }
-    }
+   if (year % 4 == 0) {
+       return year % 100 != 0 || year % 400 == 0;
+   } else {
+       return false;
+   }
+}
+
 }
